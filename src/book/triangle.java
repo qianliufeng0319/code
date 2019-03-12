@@ -2,9 +2,13 @@ package book;
 
 import java.util.Scanner;
 
+
+
 public class triangle {
 
 
+	String n;
+	
   public static void main(String[] args) {
 
 
@@ -31,7 +35,7 @@ public class triangle {
 
       }
 
-      for (int k = 0; k <= (5 - i) * 2; k++) {
+      for (int k = 0; k <= (len - i) * 2; k++) {
 
         System.out.print("*");
       }
