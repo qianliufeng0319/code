@@ -5,9 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class openChrome {
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "/Users/leon/selenium/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "D:/Gitcode/code/chromedriver.exe");
 		WebDriver dr= new ChromeDriver();
-		dr.get("http://www.baidu.com");
+		dr.get("http://www.hao123.com");
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
