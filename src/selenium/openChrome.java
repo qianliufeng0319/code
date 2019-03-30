@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class openChrome {
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "D:/Gitcode/code/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:/chrome driver/chromedriver.exe");
 		WebDriver dr= new ChromeDriver();
 		dr.get("http://www.hao123.com");
 		try {
