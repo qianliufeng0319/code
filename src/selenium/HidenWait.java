@@ -1,7 +1,9 @@
 package selenium;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +20,13 @@ public class HidenWait {
 		
 		WebElement element1 = ((ChromeDriver) dr).findElementByName("tj_trnews");
 		
-        System.out.println(dr);
+        List<WebElement> list = dr.findElements(By.xpath("//*[@id='u1']/a"));
+        
+        for(WebElement e:list){
+        	
+        	System.out.println(e.getText());
+        	
+        }
 
 				dr.quit();
 	}
