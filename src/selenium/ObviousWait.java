@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class WaitStype {
+public class ObviousWait {
 	
 	public static void main(String[] args) {
 		
@@ -16,9 +16,10 @@ public class WaitStype {
 		WebDriver dr = new ChromeDriver();
 		dr.get("http://www.baidu.com");
 		//ÏÔÊ¾µÈ´ý
-		WebElement element  = (new WebDriverWait(dr,5)).until(ExpectedConditions.presenceOfElementLocated(By.id("kw")));
+		WebElement element  = (new WebDriverWait(dr,5))
+				.until(ExpectedConditions.presenceOfElementLocated(By.id("kw")));
 		
-	
+	    dr.quit();
 		
 		
 	}
