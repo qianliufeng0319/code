@@ -3,6 +3,7 @@ package selenium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class Trademarkbackground {
 	
@@ -42,11 +43,26 @@ public class Trademarkbackground {
 			e.printStackTrace();
 		}
 		
-        dr.findElement(By.xpath("//*[@id=\'ext-element-1\']/div[1]/div[2]/div/div[1]/div/ul/li[3]/a")).click();
+        dr.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[1]/div/ul/li[3]/a")).click();
         
+        try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
+        dr.findElement(By.xpath("//*[@id=\"trademarks\"]/ul/li[1]/a/span")).click();
         
+        Select s = new Select(dr.findElement(By.xpath("//*[@id=\'apply_date_type\']")));
+        s.selectByValue("1");
         
+        try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         dr.quit();
 		
