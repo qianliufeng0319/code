@@ -27,14 +27,25 @@ public class WindowHandle {
 		 // 获取当前页面句柄  
 	      String handle = dr.getWindowHandle();
 	    // 获取所有页面的句柄，并循环判断不是当前的句柄 
-	      for(String handles : dr.getWindowHandles()) {
-	    	  
-	    	  if(handles.equals(handle))
-	    		  
-	    	  continue;
-	    	  
-	    	  dr.switchTo().window(handles);
-	      }
+//	      for(String handles : dr.getWindowHandles()) {
+//	    	  
+//	    	  if(handles.equals(handle))
+//	    		  
+//	    	  continue;
+//	    	  
+//	    	  dr.switchTo().window(handles);
+//	      }
+	      
+	      
+	   // 获取所有页面的句柄，并循环判断不是当前的句柄 
+	      
+	        for (String temhandle : dr.getWindowHandles()) {  
+	            if (!temhandle.equals(handle))  
+	            	dr.close();
+	                dr.switchTo().window(temhandle); 
+	           
+
+	        }
 	      
 	      try {
 			Thread.sleep(5000);
@@ -42,7 +53,7 @@ public class WindowHandle {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		 dr.findElement(By.xpath("/html/body/div[5]/div[2]/div/div[1]/div/dl[1]/dd/ul/li[3]/a"));
+		 dr.findElement(By.xpath("/html/body/div[5]/div[2]/div/div[1]/div/dl[1]/dd/ul/li[3]/a")).click();
 		 
 		 try {
 			Thread.sleep(5000);
