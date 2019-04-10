@@ -24,7 +24,8 @@ public class FrameSwitch {
 		// 切换到某一个frame内部
 		dr.switchTo().frame("rightMain");
 		
-		dr.findElement(By.name("taglist_menu")).click();
+		
+		dr.findElement(By.className("taglist_menu")).click();
 		
 		try {
 			Thread.sleep(1000);

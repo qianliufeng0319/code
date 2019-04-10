@@ -62,7 +62,7 @@ public class WindowHandle {
 			e.printStackTrace();
 		}
 
-
+		 dr.close();;
 		
 	}
 
